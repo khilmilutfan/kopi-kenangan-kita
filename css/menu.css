@@ -1,0 +1,389 @@
+:root {
+    --primary: #b68a5d;
+    --bg: #010101;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%; 
+    background-color: var(--bg); 
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border: 1px solid #512c28;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-ekstra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-ekstra a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    color: #fff;
+    text-align: center;
+    padding-top: 8rem; 
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+    position: relative;
+}
+
+.hero .content h1 {
+    font-size: 3rem;
+    font-style: italic;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+}
+
+.hero .content h1 span {
+    color: var(--primary);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #b0b0b0;
+}
+
+/* Menu Section */
+.menu {
+    padding: 4rem 7%;
+    background-color: var(--bg);
+    color: white;
+}
+
+.menu h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu .menu-minuman,
+.menu .menu-makanan {
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem 1rem;
+    max-width: 180px;
+}
+
+.menu .menu-minuman img,
+.menu .menu-makanan img {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+}
+
+.menu-card-title {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.menu-card-price {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Form Pemesanan */
+.order-form {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: rgba(1, 1, 1, 0.8); 
+    border: 1px solid #b68a5d; 
+    border-radius: 10px; 
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    text-align: center;
+}
+
+.order-form h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary); 
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.order-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-form label {
+    display: block;
+    margin: 0.5rem 0;
+    color: #fff; 
+    font-size: 1.1rem;
+}
+
+.order-form input,
+.order-form textarea {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    width: 100%; 
+    max-width: 300px;
+    border-radius: 8px;
+    border: 1px solid #b68a5d; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #fff;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.order-form input::placeholder,
+.order-form textarea::placeholder {
+    color: #ddd; 
+}
+
+.order-form button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%; 
+    max-width: 300px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.order-form button:hover {
+    background-color: #a6794e; 
+}
+
+.order-form button:active {
+    transform: scale(0.98);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem; 
+}
+
+footer .sosialmedia {
+    padding: 1rem 0;
+}
+
+footer .sosialmedia a {
+    color: #fff;
+    margin: 0 1rem;
+}
+
+footer .credit {
+    color: #fff;
+    margin-top: 1rem;
+}
+
+footer .sosialmedia a:hover,
+footer .links a:hover {
+    color: var(--bg);
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+}
+
+footer .links a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+
+footer .credit {
+    font-size: 1rem;
+}
+
+footer .credit a {
+    color: var(--bg);
+    font-weight: 700;
+}
+
+/*media queries*/
+/*laptop*/
+@media (max-width: 1336px) {
+    html {
+        font-size: 75%;
+    }
+  }
+  
+  /*tablet*/
+@media (max-width: 758px) {
+    html {
+        font-size: 62.5%;
+    }
+  
+    #hamburger-menu {
+        display: inline-block;
+    }
+  
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #000000bf;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+  
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+  
+    .navbar .navbar-nav a {
+        color: #ffffff;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+  
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+  
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .about .row {
+        flex-direction: column; 
+        align-items: center; 
+    }
+  
+    .about .row .about-img {
+        order: 1;
+        margin-bottom: 1rem; 
+        flex: none; 
+    }
+  
+    .about .row .about-img img {
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+        width: 100%; 
+    }
+  
+    .about .row .content {
+        order: 2;
+        padding: 0;
+        text-align: center;
+    }
+  
+    .about .row .content h3 {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+  
+    .about .row .content p {
+        font-size: 1.6rem;
+    }
+  
+    .menu p {
+        font-size: 1.2rem;
+    }
+  
+    .contact .row {
+        flex-wrap: wrap;
+    }
+  
+    .contact .row map {
+        height: 50rem;
+    }
+  
+    .contact .row from {
+        padding-top: 0;
+    }
+  }
+  
+  /*phone*/
+  @media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+  }
+  
